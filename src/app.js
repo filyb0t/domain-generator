@@ -17,16 +17,22 @@ window.onload = function() {
     ".rocks",
     ".cat",
     ".dog",
-    ".blockbuster"
+    ".blockbuster",
   ];
+
+  let domainNames = [];
 
   for (let article of articles) {
     for (let adjective of adjectives) {
       for (let noun of nouns) {
         for (let tld of tlds) {
-          console.log(`${article}${adjective}${noun}${tld}`);
+          domainNames.push(`${article}${adjective}${noun}${tld}`);
         }
       }
     }
   }
+
+  document.body.innerHTML = `<ul>${domainNames.map(
+    (domainName) => `<li>${domainName}</li>`
+  )}</ul>`;
 };
