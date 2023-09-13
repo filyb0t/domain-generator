@@ -17,7 +17,7 @@ window.onload = function() {
     ".rocks",
     ".cat",
     ".dog",
-    ".blockbuster",
+    ".blockbuster"
   ];
 
   let domainNames = [];
@@ -32,7 +32,7 @@ window.onload = function() {
     }
   }
 
-  document.body.innerHTML = `<ul>${domainNames.map(
-    (domainName) => `<li>${domainName}</li>`
-  )}</ul>`;
+  document.body.innerHTML = `<ul>${domainNames
+    .map(domainName => `<li>${domainName}</li>`)
+    .join("")}</ul>`;
 };
